@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class 복습 {
 
 	public static void main(String[] args) {
-		//좌표();
-		quize4();
+		좌표();
+//		quize3();
 		
 	}
 	
