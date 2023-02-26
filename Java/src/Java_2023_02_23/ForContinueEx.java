@@ -3,9 +3,9 @@ public class ForContinueEx {
 
 	private static void main(String[] args) {
 		continue1();
-		}
+	}
 	
-	public void continue1() {
+	public static void continue1() {
 		int k =0;
 		for(int i =0; i<10; i++) {
 			System.out.println("반복 실행문");
@@ -15,5 +15,5 @@ public class ForContinueEx {
 			}
 			System.out.println("반복실행 제한");
 		}
-}
+	}
 }

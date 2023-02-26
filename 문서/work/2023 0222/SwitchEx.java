@@ -1,4 +1,4 @@
-package Java_2023_02_22.참고용;
+package app;
 
 import java.io.IOException;
 

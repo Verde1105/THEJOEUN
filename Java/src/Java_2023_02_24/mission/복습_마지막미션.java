@@ -1,4 +1,4 @@
-package Java_2023_02_24;
+package Java_2023_02_24.mission;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import com.sun.xml.internal.bind.v2.runtime.unmarshaller.InterningXmlVisitor;
 1. 여러명의 사용인을 생성 후 여러명의 정보 관리
 2. 회원가입, 장고부족 기능 추가 
 */
-public class 복습_시험준비 {
+public class 복습_마지막미션 {
 	
 	public static void main(String[] args) {
 		

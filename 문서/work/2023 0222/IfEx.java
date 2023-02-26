@@ -1,4 +1,4 @@
-package Java_2023_02_22.참고용;
+package app;
 
 /* 제어문 (조건문)
  if, else의 조건식에 따라 프로그램의 흐름을 변경
