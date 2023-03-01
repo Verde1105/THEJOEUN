@@ -63,6 +63,9 @@ public class Method {
 
 	// 구구단을 출력하시오(메소드 사용)
 	// ex) void guguDan(int dan)
+	// 리턴이 있을때 > 메인에서 값이 불러와짐. 결과가 불러온곳에서 나옴.
+	// 리턴 없는 보이드 > 메인에서 답이 불러와지진 않음. 결과는 식에서 나옴.
+	// 소괄호()안에는 변수타입이 포함된 계산식을 쓰고, 호출하는곳에서는 변수의 이름만을 적는다. 	
 	public static int 구구단(int dan, int b) {
 		Scanner scan = new Scanner(System.in); // 입력
 		 dan = scan.nextInt(); // 입력한것을 프린트
@@ -78,11 +81,11 @@ public class Method {
 	// 연습문제 2 1~100까지 합을 구하는 함수를 정의하고 결과를 받아 출력하시오.
 	// (return type 사용)
 	public static int 연습문제2(int a) {
-				for (int i = 2; i <= 100; i++) {
-					a = a+i;
-				}
-				return a;
-			}
+		for (int i = 2; i <= 100; i++) {
+			a = a+i;
+		}
+		return a;
+	}
 	/*
 	 * result = returnSum();
 	 * System,out.print....
@@ -119,7 +122,7 @@ public class Method {
 	 * }
 	 * System.out.println("sum : " + sum);
 	 */
-	
+	//메소드 1에서 나온 값 + 메소드2에서 나온 값 = 메소드 3에서 담아 호출.
 	
 // 응용문제 1) public static void method(int dan, int dan2) {코드를 작성하시오. (dan ~ dan2 구구단 출력)}
 	
@@ -147,12 +150,12 @@ public class Method {
 		 * }
 		 */
 	
-// 응용문제 2) 2, 5, 7, 3, 9 -> 인자값, 구구단출력 함수구현
+// 응용문제 2) {2, 5, 7, 3, 9} -> 인자값, 구구단출력 함수구현
 		/*
 		 * int[] arr = {2,5,7,3,9};
 		 * method2(arr);
 		 * }
-		 * static void guguDan
+		 * static void guguDan()
 		 */
 // 인자값이란게 뭔지 도통..
 		public static void arr132() {
