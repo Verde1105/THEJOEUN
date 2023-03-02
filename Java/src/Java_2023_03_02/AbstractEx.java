@@ -19,10 +19,9 @@ class AbstractEx {
 }
 */
 
-	public abstract class Shape1{
-		protected int x, y;
-		public abstract double area();
-		public abstract double circumference();
-		
-		
+public abstract class Shape1{
+	protected int x, y;
+	public abstract double area();
+	public abstract double circumference();
+	
 }

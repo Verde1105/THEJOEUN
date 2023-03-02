@@ -38,9 +38,7 @@ public class Rect extends Shape {
 		height = h;
 	}
 
-	public int getSize(int w, int h) {
-		width = w;
-		height = h;
-		return w * h;
+	public int getSize() {
+		return x*2 + y*2;
 	}
 }

@@ -16,7 +16,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		String id = "";
 		String password = "";
-		String[][] database = new String [10][3];
+		String[][] database = new String [10][4];
 		String session[] = new String[3];
 		
 		/* 클래스 instance 생성 */

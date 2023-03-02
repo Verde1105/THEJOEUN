@@ -19,11 +19,9 @@ class AbstractEx {
 }
 */
 
-	public abstract class Shape{
-		protected int x, y;
-		double pi = Math.PI;
-		public abstract double area();
-		public abstract double circumference();
-		
-		
+public abstract class Shape{
+	protected int x, y;
+	double pi = Math.PI;
+	public abstract double area();
+	public abstract double circumference();
 }

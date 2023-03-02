@@ -18,9 +18,10 @@ public class A1_회원가입 {
 		for (int i = 0; i < database.length; i++) {
 			if (database[i][0] == null) {
 				// System.out.println(i + " index is null");
-				database[i][0] = id;
-				database[i][1] = password;
-				database[i][2] = "0";
+				database[i][0] = id;										// 아이디
+				database[i][1] = password;									// 비밀번호
+				database[i][2] = "0";										// 잔고
+				database[i][3] =  String.valueOf((int)(Math.random()*100));	// 계좌번호
 				break;
 			}else {
 				System.out.println(i + " index is not null");
@@ -33,6 +34,7 @@ public class A1_회원가입 {
 			System.out.println(i+", ID : " + database[i][0]);
 			System.out.println(i+", PW : " + database[i][1]);
 			System.out.println(i+", BALANCE : " + database[i][2]);
+			System.out.println(i+", 계좌번호 : " + database[i][3]);
 			break;
 		}// The end of for (data select *)
 		

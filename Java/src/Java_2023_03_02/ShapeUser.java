@@ -10,18 +10,15 @@ public class ShapeUser {
 		System.out.println("Shape[0]'s area = " + Shape[0].area());
 		System.out.println("Shape[1]'s area = " + Shape[1].area());
 		System.out.println("Shape[2]'s area = " + Shape[2].area());
+		
+		//	Quize2. 도형들 둘레구하기
+		//	(1). 사각
+		Rect r = new Rect(3,4);
+//		r.setSize(3, 4);
+		System.out.println("r.getSize() : "+r.getSize());
 
-		
-		Rect r = new Rect();
+		//	(2). 원
 		Circle c = new Circle(7);
-		
-		System.out.println(r.getSize(2, 3));
 		System.out.println(c.circumference());
 	}
-//	도형들 둘레구하기
-//	사각
-//	원
-	
-	
-
 }

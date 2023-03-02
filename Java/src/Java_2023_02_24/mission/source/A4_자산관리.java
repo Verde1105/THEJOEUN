@@ -14,9 +14,9 @@ public static String[][] 자산관리시스템(String[][] database, String[] ses
 		Scanner scanner = new Scanner(System.in);
 		//1.2.3 제작
 		do {
-			System.out.println("------------------------------------");
-			System.out.println("1.예금 | 2. 출금 | 3. 잔고 | 4. 종료");
-			System.out.println("------------------------------------");
+			System.out.println("--------------------------------------------------");
+			System.out.println("1.예금 | 2. 출금 | 3. 잔고 | 4. 계좌이체 | 0. 종료");
+			System.out.println("--------------------------------------------------");
 			System.out.println("선택>");
 			int menuNum = scanner.nextInt();
 			
@@ -34,6 +34,21 @@ public static String[][] 자산관리시스템(String[][] database, String[] ses
 				System.out.println("balance : "+balance);//누구를 위한 벨런스인가를 고민해봤길 바람.
 				break;
 			case 4:
+				System.out.println("계좌번호 입력>");
+				String 계좌번호 = new Scanner(System.in).nextLine();
+				System.out.println("입금금액 입력>");
+				String 입금금액 = new Scanner(System.in).nextLine();
+				for (int i = 0; i < database.length; i++) {
+					// 1. 입력한 계좌번호가 맞으면
+					if (database[i][3].equals(계좌번호)) {
+						database[i][2] = String.valueOf(입금금액);
+						break;
+					}
+				}
+				balance -= Integer.parseInt(입금금액);
+				System.out.println("balance : "+balance);//누구를 위한 벨런스인가를 고민해봤길 바람.
+				break;
+			case 0:
 				run = false;
 				break;
 			default:
