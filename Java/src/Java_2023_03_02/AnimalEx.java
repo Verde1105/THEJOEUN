@@ -1,8 +1,9 @@
-package Java_2023_02_28;
+package Java_2023_03_02;
 
 
 //클래스 예제
-public class AnimalEx {
+//public class AnimalEx {
+public class AnimalEx extends 토깽{
 	
 	// 변수 선언
 	int age;		// 나이
@@ -37,5 +38,10 @@ public class AnimalEx {
 		System.out.println(animal.name + "의 나이는 " + animal.age);
 //		animal.bark(10);
 		animal.bark();
+	}
+}
+class 토깽 {
+	public void bark() {
+		System.out.println("꾸이꾸");
 	}
 }
