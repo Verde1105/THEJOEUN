@@ -10,6 +10,8 @@ public class A1_회원가입 {
 		System.out.print("비밀번호 입력 : ");
 		String password = new Scanner(System.in).nextLine();
 		
+		boolean debugMode = false;
+		
 		System.out.println("ID : "+id);
 		System.out.println("PW : "+password);
 		
@@ -23,20 +25,26 @@ public class A1_회원가입 {
 				database[i][2] = "0";										// 잔고
 				database[i][3] =  String.valueOf((int)(Math.random()*100));	// 계좌번호
 				break;
-			}else {
-				System.out.println(i + " index is not null");
-				System.out.println(id + "," + password);
+			}else if( (database[i][0] != null || database[i][0].equals(id)) ){
+				System.out.println("------------------------------------------------");
+				System.out.println("************* === 회원가입 실패 === ************");
+				System.out.println("************** 중복된 아이디 입니다.************");
+				System.out.println("------------------------------------------------");
+				break;
 			}
 		}// The end of for (data insert)
 		
 		// 2. 입력된 데이터 확인
-		for (int i = 0; i < database.length; i++) {
-			System.out.println(i+", ID : " 		+ database[i][0]);
-			System.out.println(i+", PW : " 		+ database[i][1]);
-			System.out.println(i+", BALANCE : " + database[i][2]);
-			System.out.println(i+", 계좌번호 : "+ database[i][3]);
-			break;
-		}// The end of for (data select *)
+		if (debugMode) {
+			System.out.println("입력된 데이터 확인");
+			for (int i = 0; i < database.length; i++) {
+				System.out.println(i+", ID : " 		+ database[i][0]);
+				System.out.println(i+", PW : " 		+ database[i][1]);
+				System.out.println(i+", BALANCE : " + database[i][2]);
+				System.out.println(i+", 계좌번호 : "+ database[i][3]);
+				break;
+			}// The end of for (data select *)
+		}
 		
 		return database;
 	}// The end of method

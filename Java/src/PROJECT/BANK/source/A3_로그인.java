@@ -14,6 +14,7 @@ public class A3_로그인 {
 		String password = new Scanner(System.in).nextLine();
 		String chackPW = "";
 		
+		
 		// 1. Database에 ID 확인
 		for (int i = 0; i < database.length; i++) {
 			
@@ -22,6 +23,13 @@ public class A3_로그인 {
 				chackPW = database[i][1];
 				session[2] = Integer.toString(i); //PK
 				break;
+			}else if (database[i][0] == null || database[i][0].equals(null) || 
+				!(database[i][0].equals(id)) ) {
+				System.out.println("------------------------------------------------");
+				System.out.println("************** === 로그인 실패 === *************");
+				System.out.println("************ 로그인을 할 수 없습니다.***********");
+				System.out.println("------------------------------------------------");
+				return null;
 			}
 		}// The end of For
 		
