@@ -10,12 +10,12 @@ import PROJECT.BANK.source.A4_자산관리;
  * Realease Note
  * 2023-03-06 : 아이디 중복 체크
  * 2023-03-06 : 데이터 없을때 로그인 불가
+ * 2023-03-07 : 관리자페이지
  */
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/* 변수부 */
+		/* 변수 선언부 */
 		boolean run = true;
 		Scanner scanner = new Scanner(System.in);
 		String id = "";
@@ -44,7 +44,7 @@ public class Main {
 				case 1://연산 후 대입연산
 					System.out.println("------------------------------------------------");
 					System.out.println("***************** 1. 회원가입 ******************");
-					database = 회원가입_instance.회원가입(database);
+					database = 회원가입_instance.회원가입(database, "없음", "없음");
 					System.out.println("------------------------------------------------");
 					break;
 				case 2://연산 후 대입연산

@@ -80,7 +80,14 @@ public class CheckboxEx2 extends Frame implements ItemListener{
 		cho.addItemListener(this);
 
 	}
-	public void adjustmentValueChanged(ItemEvent e) {
+	
+	public static void main(String[] args) {
+		new CheckboxEx2();
+	}
+	
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
 		Object o = e.getSource();
 		if(o == cho) {
 			String str = cho.getSelectedItem();
@@ -98,14 +105,6 @@ public class CheckboxEx2 extends Frame implements ItemListener{
 		ta.append("2. 딸기  : " + ch5.getState()+"\n");
 		ta.append("3. 배  : " + ch6.getState()+"\n");
 		cho.select(temp.getLabel());
-	}
-	public static void main(String[] args) {
-		new CheckboxEx2();
-	}
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

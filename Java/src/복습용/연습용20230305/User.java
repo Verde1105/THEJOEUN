@@ -1,4 +1,4 @@
-package 복습용20230305;
+package 복습용.연습용20230305;
 //아이디와 패스워드 계좌번호(num)
 public class User {
 	String id = "";

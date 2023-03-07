@@ -7,7 +7,7 @@ import java.awt.GridLayout;
 import java.awt.Panel;
 import java.awt.TextArea;
 
-import 복습용20230305.User;
+import 복습용.연습용20230305.User;
 
 public class 난이제모른다 extends Frame{
 	public Panel p1, p2, p3;

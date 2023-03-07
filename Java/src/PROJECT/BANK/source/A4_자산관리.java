@@ -14,9 +14,9 @@ public static String[][] 자산관리시스템(String[][] database, String[] ses
 		Scanner scanner = new Scanner(System.in);
 		//1.2.3 제작
 		do {
-			System.out.println("--------------------------------------------------");
-			System.out.println("1.예금 | 2. 출금 | 3. 잔고 | 4. 계좌이체 | 0. 종료");
-			System.out.println("--------------------------------------------------");
+			System.out.println("------------------------------------------------------");
+			System.out.println("1.예금 | 2. 출금 | 3. 잔고 | 4. 계좌이체 | 0. 로그아웃");
+			System.out.println("------------------------------------------------------");
 			System.out.println("선택>");
 			int menuNum = scanner.nextInt();
 			
@@ -41,6 +41,7 @@ public static String[][] 자산관리시스템(String[][] database, String[] ses
 				for (int i = 0; i < database.length; i++) {
 					// 1. 입력한 계좌번호가 맞으면
 					if (database[i][3].equals(계좌번호)) {
+						// 2. 계좌번호 주인의 balance에 금액을 더한다.
 						database[i][2] = String.valueOf(입금금액);
 						break;
 					}

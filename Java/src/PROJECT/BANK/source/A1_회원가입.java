@@ -4,11 +4,23 @@ import java.util.Scanner;
 
 public class A1_회원가입 {
 	/* 1. 회원가입 기능 */
-	public static String[][] 회원가입(String[][] database) {
-		System.out.print("아이디 입력 : ");
-		String id = new Scanner(System.in).nextLine();
-		System.out.print("비밀번호 입력 : ");
-		String password = new Scanner(System.in).nextLine();
+	public static String[][] 회원가입(String[][] database, String awtID, String awtPW) {
+		
+		String id = null;
+		String password = null;
+		
+		// awt를 통해 입력받는 경우 기존방식 skip
+		if (awtID.equals("없음")) {
+			System.out.print("아이디 입력 : ");
+			id = new Scanner(System.in).nextLine();
+			System.out.print("비밀번호 입력 : ");
+			password = new Scanner(System.in).nextLine();
+		}else {
+			// 기존방식으로 접근하는 경우
+			id = awtID;
+			password = awtPW;
+		}
+		
 		
 		boolean debugMode = false;
 		

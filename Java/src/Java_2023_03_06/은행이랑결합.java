@@ -11,7 +11,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Scanner;
 
-import 복습용20230305.User;
+import 복습용.연습용20230305.User;
 
 public class 은행이랑결합 extends Frame{
 	public Panel p1, p2, p3;

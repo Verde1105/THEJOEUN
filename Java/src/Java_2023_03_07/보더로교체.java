@@ -15,9 +15,10 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Scanner;
 
-import 복습용20230305.User;
+import 복습용.연습용20230305.User;
 
 public class 보더로교체 extends Frame implements ActionListener{
+	/* 변수 선언부 */
 	public Panel p1, p2, p3;
 	public Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11;
 	public TextArea ta;
@@ -127,7 +128,7 @@ public class 보더로교체 extends Frame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand()==b1.getLabel()) {
-			ta = new TextArea("ㅇㅇㅇ", 20, 20, 3);//얘까지는 된다.
+//			ta = new TextArea("ㅇㅇㅇ", 20, 20, 3);//얘까지는 된다.
 		}else if (e.getActionCommand()==b2.getLabel()) {
 		}else if (e.getActionCommand()==b3.getLabel()) {
 		}else if (e.getActionCommand()==b4.getLabel()) {
