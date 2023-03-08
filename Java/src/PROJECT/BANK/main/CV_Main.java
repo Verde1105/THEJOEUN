@@ -34,7 +34,7 @@ public class CV_Main {
 				case 1://연산 후 대입연산
 					System.out.println("------------------------------------------------");
 					System.out.println("***************** 1. 회원가입 ******************");
-					database = A1_회원가입.회원가입(database);
+					database = A1_회원가입.회원가입(database, "없음", "없음");
 					System.out.println("------------------------------------------------");
 					break;
 				case 2://연산 후 대입연산

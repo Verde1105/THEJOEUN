@@ -11,6 +11,8 @@ import PROJECT.BANK.source.A4_자산관리;
  * 2023-03-06 : 아이디 중복 체크
  * 2023-03-06 : 데이터 없을때 로그인 불가
  * 2023-03-07 : 관리자페이지
+ * 2023-03-08 : 계좌번호 13자리
+ * 2023-03-08 : 회원가입시 가입일 추가
  */
 public class Main {
 
@@ -20,7 +22,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		String id = "";
 		String password = "";
-		String[][] database = new String [10][4];
+		String[][] database = new String [10][5];
 		String session[] = new String[3];
 		
 		/* 클래스 instance 생성 */
