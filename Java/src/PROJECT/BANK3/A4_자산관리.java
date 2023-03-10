@@ -1,4 +1,4 @@
-package PROJECT.BANK.source;
+package PROJECT.BANK3;
 
 import java.util.Scanner;
 

@@ -2,6 +2,7 @@ package PROJECT.Dao;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 
 public class User {
@@ -49,7 +50,34 @@ public class User {
 	}
 	public User() {
 		super();
-		this.joinDate = LocalDate.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd"));
+		String day = "";
+		int dayNum = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+		int monthNum = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+		switch (dayNum) {
+		case 1:
+			day = "일";
+			break;
+		case 2:
+			day = "월";
+			break;
+		case 3:
+			day = "화";
+			break;
+		case 4:
+			day = "수";
+			break;
+		case 5:
+			day = "목";
+			break;
+		case 6:
+			day = "금";
+			break;
+		case 7:
+			day = "토";
+			break;
+		}
+		
+		this.joinDate = LocalDate.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd"))+" "+day;
 	}
 	
 }

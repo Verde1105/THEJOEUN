@@ -1,6 +1,6 @@
-package PROJECT.BANK.main;
+package PROJECT.BANK3;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 import PROJECT.BANK.source.A1_회원가입;
 import PROJECT.BANK.source.A2_회원정보;
@@ -22,7 +22,8 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		String id = "";
 		String password = "";
-		String[][] database = new String [10][5];
+//		String[][] database = new String [10][5];
+		ArrayList<User> database = new ArrayList<User>();
 		String session[] = new String[3];
 		
 		/* 클래스 instance 생성 */

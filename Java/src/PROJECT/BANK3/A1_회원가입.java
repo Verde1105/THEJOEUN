@@ -1,12 +1,13 @@
-package PROJECT.BANK.source;
+package PROJECT.BANK3;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class A1_회원가입 {
 	/* 1. 회원가입 기능 */
-	public static String[][] 회원가입(String[][] database, String awtID, String awtPW) {
+	public static ArrayList<User> 회원가입(ArrayList<User>] database, String awtID, String awtPW) {
 		
 		String id = null;
 		String password = null;
@@ -28,12 +29,10 @@ public class A1_회원가입 {
 		
 		System.out.println("ID : "+id);
 		System.out.println("PW : "+password);
-		
-		
 		String 계좌번호 = "";
 		
 		// 1. 회원 데이터 입력
-		for (int i = 0; i < database.length; i++) {
+//		for (int i = 0; i < database.length; i++) {
 			if (database[i][0] == null) {
 				// System.out.println(i + " index is null");
 				
@@ -61,7 +60,7 @@ public class A1_회원가입 {
 				System.out.println("------------------------------------------------");
 				break;
 			}
-		}// The end of for (data insert)
+//		}// The end of for (data insert)
 		
 		// 2. 입력된 데이터 확인
 		if (debugMode) {
