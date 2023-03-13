@@ -8,13 +8,14 @@ import java.awt.MenuItem;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//연습문제4 뉴파일 > 오픈파일 > 세이브파일 > 세이브에즈 > 탈출 구현하기
 public class MenunIOEx extends Frame implements ActionListener{
 	public MenuBar mb;
 	public Menu m;
 	public MenuItem[] mi;
 	public TextArea ta;
-//	public FileDialog fd_ open, fd_save;
+	public FileDialog fd_open, fd_save; 
+	public String save_file;
 //	public String save_filel
 	public MenunIOEx() {
 		ta = new TextArea();
@@ -61,6 +62,9 @@ public class MenunIOEx extends Frame implements ActionListener{
 		}else if (o == mi[4]) {
 			System.exit(0);
 		}
+		fd_open = new FileDialog(this,"파일 열기", FileDialog.LOAD);
+		fd_save = new FileDialog(this,"파일 저장", FileDialog.SAVE);
+		fd_save.setVisible(true);
 		// TODO Auto-generated method stub
 		
 	}
