@@ -1,4 +1,10 @@
 package PROJECT.BANK_Ver2.Service;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -6,7 +12,7 @@ import PROJECT.Dao.User;
 
 public class A1_회원가입 {
 	/* 1. 회원가입 기능 */
-	public static List<User> 회원가입(List<User> database, String awtID, String awtPW) {
+	public static List<User> 회원가입(List<User> database, String awtID, String awtPW) throws Exception{
 		
 		String id = null;
 		String password = null;
@@ -82,6 +88,23 @@ public class A1_회원가입 {
 			}// The end of for (data insert)
 		}
 		
+		// 1. 기존파일 경로 path(경로)에 저장
+		String path = System.getProperty("user.dir") + "\\src\\PROJECT\\BANK_Ver2\\Service\\Database.txt";
+		
+		// 2. 저장한 경로를 통해 파일쓰기 생성
+		FileWriter textFw = new FileWriter(path, true);
+		
+		// 3. 파일쓰기를 통해 *쓰기버퍼*를 생성
+		BufferedWriter textBw = new BufferedWriter(textFw);
+		
+		// 4. 회원가입한 데이터를 *쓰기버퍼*에 입력
+		if (database.size()>0) {
+			textBw.write(database.get(database.size()-1).toString()+"\n");
+		}
+		
+		// 5. BufferedWriter(쓰기버퍼)에 입력한 내용을 파일에 저장
+		textBw.flush();
+		textBw.close();
 		
 		return database;
 	}// The end of method

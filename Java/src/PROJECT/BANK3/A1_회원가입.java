@@ -3,11 +3,15 @@ package PROJECT.BANK3;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import PROJECT.Dao.User;
 
 public class A1_회원가입 {
 	/* 1. 회원가입 기능 */
-	public static ArrayList<User> 회원가입(ArrayList<User>] database, String awtID, String awtPW) {
+//	public static List<User> 회원가입(List<User> database, String awtID, String awtPW) {
+	public static ArrayList<User> 회원가입(ArrayList<User> database, String awtID, String awtPW) {
 		
 		String id = null;
 		String password = null;
