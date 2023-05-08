@@ -12,21 +12,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HttpControllerTest {
 	
-	private static final String tag = "HttpControllerTest : ";
+	private static final String TAG = "HttpControllerTest : ";
 	
-	@GetMapping("/http/chatting") 
-	public String index(@RequestParam Member m) {
-//		return "get 요청 : " + m.getId() + "," + m.getPassword() + "," + m.getUsername() + "," + m.getEmail();
-		return "Chatting";
+	@GetMapping("http/lombok")
+	public String lombokTest() {
+//		Member member = new Member(1, "testid", "p@ssword1234", "test@test.com");
+		Member member = Member.builder().username("testName").password("p@ssword1234").email("test@test.com").build();
+		System.out.println(TAG + "getter : "+member.getUsername());
+		member.setUsername("setUserName");
+		System.out.println(TAG + "setter : "+member.getUsername());
+		Member member1 = new Member(1, "testid", "1234", "test@test.com");
+		return "lombok Test 완료";
+		
 	}
 	
 	//http://localhost:8080/http/get (select)
 	@GetMapping("/http/get") 
-	public String getTest(Member m) {
-		System.out.println(tag+"getter  : " +  m.getClass());
-		Member m1 = new Member();
-		return "get 요청 : " + m.getClass();
+	public String getTest(Member member) {
+		return "get 요청 : ";
 	}
+	
 	//http://localhost:8080/http/post (insert)
 	@PostMapping("/http/post")
 	public String postTest(@RequestBody  Member m) {
