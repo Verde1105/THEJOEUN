@@ -1,0 +1,14 @@
+<%@ page contentType="text/html; charset=UTF-8"
+%>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<jsp:useBean id="date" class = "java.util.Date" />
+	<p><% 
+		out.print("오늘의 날짜 및 시각");
+		%>
+	<p><%=date%>
+</body>
+</html>

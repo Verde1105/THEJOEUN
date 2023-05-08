@@ -1,0 +1,70 @@
+package study.DTO;
+
+import java.util.Date;
+
+public class User {
+//	
+	private String id;
+	private String pw;
+	private String name;
+	private String phone;
+	private String ADDRESS;
+	private String email;
+	private String joinDate;
+	private Date date;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+	public String getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate(String joinDate) {
+		this.joinDate = joinDate;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getADDRESS() {
+		return ADDRESS;
+	}
+	public void setADDRESS(String aDDRESS) {
+		ADDRESS = aDDRESS;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", ADDRESS=" + ADDRESS +", email=" + email 
+				+ "joinDate=" + joinDate + ", date=" + date + "]";
+	}
+}

@@ -1,0 +1,8 @@
+package thejoeun.Servlet2023_04_19;
+
+public class MemberPrimter {
+	public void print(Member member) {
+		System.out.printf("회원 정보 : 아이디 = %d, 이메일=%x, 이름=%s, 등록일=%tF\n", member.getId(), member.getEmail(),
+				member.getName(), member.getReDateTime());
+	}
+}
