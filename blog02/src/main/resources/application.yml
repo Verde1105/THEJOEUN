@@ -8,7 +8,7 @@ spring:
       
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://kms.mysql.database.azure.com:3306/blog-hhr?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://kms.mysql.database.azure.com:3306/bloghhr?serverTimezone=Asia/Seoul
     username: master
     password: rlaalstj!234
   
