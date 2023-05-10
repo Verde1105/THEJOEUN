@@ -4,14 +4,18 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicInsert;
 
 @Entity//유저 클래스가  자동으로 데이터베이스에 테이블 생성
+//@DynamicInsert 인서트 시에 널인 필드를 제외시켜 준다.
 public class User {
 
 	@Id//프라이머리키 생성
@@ -27,9 +31,10 @@ public class User {
 	@Column(nullable = false,length = 50)
 	private String email;
 
-	@ColumnDefault("user")
-	private String role;//Enum-이넘 을 쓰는게 좋다. //어드민,유저.매니저(특정 권한을 줄수있다)
+//	@ColumnDefault("user") 야 기억해 ㅋㅋㅋ. 이넘 없이 이것만 했을때 테이블 안만들어졌음ㅋㅋㅋ.
+	@Enumerated(EnumType.STRING)//DB는 롤타입이라는게 없어서, 이넘파일의 타입을 따라가 달라고 이야기한것.
+	private RoleType role;//이넘 을 쓰는게 좋다. //어드민,유저.매니저(특정 권한을 줄수있다)
 	
 	@CreationTimestamp//시간이 자동입력
-	private Timestamp ecreateDate;;
+	private Timestamp createDate;
 }
