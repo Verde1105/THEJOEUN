@@ -14,6 +14,18 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder//빌더패턴
+//orm > java(다른언어) 오브젝트 > xpdlqmffh aovldgownsms rltnf
 @Entity//유저 클래스가  자동으로 데이터베이스에 테이블 생성
 //@DynamicInsert 인서트 시에 널인 필드를 제외시켜 준다.
 public class User {
