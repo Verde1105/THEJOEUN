@@ -53,7 +53,7 @@ public class DummyControllerTest {
 		System.out.println("Email : " + requestUser.getEmail());
 		
 		User user = userRepository.findById(id).orElseThrow(()->{//람다식
-		return new IllegalArgumentException("수정이 불가능 합니다. 아래 사항을 참고해 주세요!");
+			return new IllegalArgumentException("수정이 불가능 합니다. 아래 사항을 참고해 주세요!");
 		});
 		user.setPassword(requestUser.getPassword());//여기서 데이터베이스에서 가져온 정보를 수정
 		user.setEmail(requestUser.getEmail());
@@ -76,6 +76,8 @@ public class DummyControllerTest {
 		List<User> users = pagingUser.getContent();
 		return users;
 	}
+//	http://127.0.0.1:8000/blog/
+	
 	
 //	http://localhost:8000/blog/dummy/user/
 //	{id} 주소로 파라미터를 전달받을 수 있음.
