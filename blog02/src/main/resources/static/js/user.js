@@ -3,6 +3,32 @@ let index = {
 		$("#btn-save").on("click",()=>{
 			this.save();
 		});
+		$("#btn-update").on("click",()=>{
+			this.update();
+		});
+	},
+	
+	update: function(){
+		alert('user의 save함수 호출됨');
+		let data = {
+			id: $("#id").val(),
+			password: $("#password").val(),
+			email: $("#email").val()
+		}
+		
+		$.ajax({//회원가입 수행 요청
+			type:"put",
+			url:"/user",
+			data:JSON.stringify(data),//http 바디 데이터
+			contentType:"application/json; charset=utf-8",//바디데이터가 어떤 타입인지(mime)
+			dataTtpe:"json"//요청을 서버로 해서 응답이 왔을땐,기본적으로 모든것이 문자열(생긴게 json이라면)
+		}).done(function(resp){
+			alert("회원수정이 완료되었습니다.");
+			Cconsole.LOG(resp);
+			location.href = "/";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});//에이젝스 통신을 이용하여 3개의 파라미터를 제이슨으로 변경하여 인서트 요청
 	},
 	
 	save: function(){

@@ -68,13 +68,13 @@ public class DummyControllerTest {
 	}
 	
 	@GetMapping("/dummy/user")//size 갯수에 따라 한 페이지에 몇개나 가져올지 정할 수 있음.
-	public List<User> pageList(@PageableDefault(size = 2, sort = "id", direction = Direction.DESC)Pageable pageble){
+	public Page<User> pageList(@PageableDefault(size = 2, sort = "id", direction = Direction.DESC)Pageable pageble){
 		Page<User> pagingUser = userRepository.findAll(pageble);
 		if(pagingUser.isLast()) {
 			
 		}
 		List<User> users = pagingUser.getContent();
-		return users;
+		return pagingUser;
 	}
 //	http://127.0.0.1:8000/blog/
 	
