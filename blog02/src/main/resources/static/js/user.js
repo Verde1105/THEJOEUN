@@ -34,8 +34,8 @@ let index = {
 	save: function(){
 		alert('user의 save함수 호출됨');
 		let data = {
-			username: $("#username").val(),
-			password: $("#password").val(),
+			username: $("#Username").val(),
+			password: $("#Password").val(),
 			email: $("#email").val()
 		}
 		//console.log(data);
@@ -50,7 +50,8 @@ let index = {
 			dataTtpe:"json"//요청을 서버로 해서 응답이 왔을땐,기본적으로 모든것이 문자열(생긴게 json이라면)
 		}).done(function(resp){
 			alert("회원가입이 완료되었습니다.");
-			Cconsole.LOG(resp);
+			//Cconsole.LOG(resp);
+			console.log(resp)
 			location.href = "/";
 		}).fail(function(error){
 			alert(JSON.stringify(error));

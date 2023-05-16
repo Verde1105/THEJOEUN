@@ -24,7 +24,7 @@
 		</c:choose>
 
 		<c:choose>
-			<c:when test="${boards.list}">
+			<c:when test="${boards.last}">
 				<li class = "page-item disabled"><a class = "page-link" href = "?page=${board.number+1}">Next</a></li>
 			</c:when>
 			<c:otherwise>
