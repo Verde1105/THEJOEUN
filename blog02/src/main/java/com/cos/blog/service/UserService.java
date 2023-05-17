@@ -1,6 +1,10 @@
 package com.cos.blog.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,7 +46,11 @@ public class UserService {
 		persistance.setEmail(user.getEmail());
 		//회원수정 함수 종료시 = 서비스 종료 = 트랜잭션 종료 = 커밋이 자동으로 됩니다.
 		//영속화 된 persistance 객체의 변화가 감지되면 더티체킹이 되어 업데이트문을 자동으로 날려준다(깃허브같네)
+	
 	}
+
+	
+	
 	
 //	@Transactional(readOnly = true)
 //	public User 로그인(User user) {

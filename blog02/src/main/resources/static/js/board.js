@@ -56,7 +56,7 @@ let index = {
 		
 		$.ajax({//글쓰기 수행 요청
 			type:"put",
-			url:"/api/boar/d"+id,
+			url:"/api/board/"+id,
 			data:JSON.stringify(data),//http 바디 데이터
 			contentType:"application/json; charset=utf-8",//바디데이터가 어떤 타입인지(mime)
 			dataTtpe:"json"//요청을 서버로 해서 응답이 왔을땐,기본적으로 모든것이 문자열(생긴게 json이라면)

@@ -9,10 +9,11 @@ let index = {
 	},
 	
 	update: function(){
-		alert('user의 save함수 호출됨');
+		alert('유저의 회원정보 호출됨');
 		let data = {
 			id: $("#id").val(),
-			password: $("#password").val(),
+			username: $("#Username").val(),
+			password: $("#Password").val(),
 			email: $("#email").val()
 		}
 		
