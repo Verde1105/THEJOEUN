@@ -33,7 +33,7 @@ let index = {
 	},
 
 	deleteById: function(){
-		var id = $("#id").text();
+		let id = $("#id").text();
 		$.ajax({
 			type:"DELETE",
 			url:"/api/board"+id,

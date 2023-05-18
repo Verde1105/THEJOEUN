@@ -51,6 +51,7 @@ public class BoardService {
 		
 	}
 	
+	@Transactional
 	public void 글수정하기(int id,Board requestBoard) {
 		Board board = boardRepository.findById(id)
 				.orElseThrow(()->{
@@ -58,5 +59,6 @@ public class BoardService {
 				});//영속화 완료
 		board.setTitle(requestBoard.getTitle());
 		board.setCount(requestBoard.getCount());
+		//해당 함수 종료시(서비스 조욜시) 트랜잭션 종료, 자동 업데이트가 되어서 db에 갱신
 	}
 }
