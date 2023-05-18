@@ -5,7 +5,6 @@
 		
 <div class="container">
 	<button class = "btn btn-secondary" onclick="history.back()">돌아가기</button>
-	
 	<c:if test="${board.user.id == principal.user.id}">
 		<a href = "/board/${board.id}/updateForm" class = "btn btn-warning">수정</a>
 		<button id="btn-delete" class = "btn btn-danger">삭제</button>
@@ -13,6 +12,7 @@
 	
 	<br>
 	<br>
+	<!-- 게시글 -->
 	<div>
 		글 번호 : <span id="id">
 					<i>${board.id}</i>
@@ -36,6 +36,7 @@
 	</div>
 
 	<hr/>
+	<!-- 댓글 -->
 	<div class="card">
 		<div class="card-body">
 			<textarea class="form-control" rows="1"></textarea>
