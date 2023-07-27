@@ -38,12 +38,17 @@
 	<hr/>
 	<!-- 댓글 -->
 	<div class="card">
-		<div class="card-body">
-			<textarea class="form-control" rows="1"></textarea>
-		</div>
-		<div class="card-footer">
-			<button class="btn btn-primary">등록</button>
-		</div>
+		<form>
+			<input type="hidden" id = "userid" value = "${princpal.user.id }"/>
+			<input type="hidden" id = "boardid" value = "${board.id }"/>
+			<div class="card-body">
+				<textarea class="form-control" rows="1"></textarea>
+			</div>
+			<div class="card-footer">
+				<button class="btn btn-primary">등록</button>
+			</div>
+		</form>
+	</div>
 		<br/>
 		<div class="card">
 			<div class="card-header">댓글리스트</div>
@@ -57,8 +62,6 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-</div>
 <script>
 	$('.summernote').summernote({
 		tabsize: 2,

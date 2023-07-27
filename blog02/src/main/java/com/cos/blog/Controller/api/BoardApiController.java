@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cos.blog.config.auth.PrincipalDetail;
+import com.cos.blog.dto.ReplySaveRequestDto;
 import com.cos.blog.dto.ResponseDto;
 import com.cos.blog.model.Board;
+import com.cos.blog.model.Reply;
 import com.cos.blog.model.RoleType;
 import com.cos.blog.model.User;
 import com.cos.blog.service.BoardService;
@@ -48,6 +50,15 @@ public class BoardApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	
+	
+	//이하 댓글 메소드
+	//데이터 받을때 컨트롤러에서 dto만들어서 받는게 좋다.
+	//dto를 사용하지 않은 이유는, 소괄호 안에 받아야 할 데이터가 너무 많아지기 때문. <<정리의 문제인듯.
+	@PostMapping("/api/board/{id}/reply")
+	public ResponseDto<Integer> replySave(@RequestBody ReplySaveRequestDto replySaveRequestDto) {
+		boardService.댓글쓰기(replySaveRequestDto);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
 	
 }
 	

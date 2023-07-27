@@ -74,11 +74,10 @@ let index = {
 	replysave: function(){
 		alert('user의 save함수 호출됨');
 		let data = {
-			boardid : $("#boardid").val(),
-			content: $("#content").val(),
+			userid: $("#userid").val(),
+			boardid: $("#userid").val(),
+			content: $("#reply-content").val(),
 		};
-		
-		console.log(data);
 		
 		$.ajax({//글쓰기 수행 요청
 			type:"post",
@@ -88,7 +87,7 @@ let index = {
 			dataType:"json"//요청을 서버로 해서 응답이 왔을땐,기본적으로 모든것이 문자열(생긴게 json이라면)
 		}).done(function(resp){
 			alert("댓글작성이 완료되었습니다.");
-			location.href = '/board/${data.boardid}';
+			location.href = '/board/${boardid}';
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});//에이젝스 통신을 이용하여 3개의 파라미터를 제이슨으로 변경하여 인서트 요청

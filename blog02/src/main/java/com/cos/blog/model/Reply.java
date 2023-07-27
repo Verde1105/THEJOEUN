@@ -1,6 +1,6 @@
 package com.cos.blog.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -40,5 +40,20 @@ public class Reply {
 	private User user;
 	
 	@CreationTimestamp
-	private Timestamp createDate;
+	private LocalDateTime createDate;
+
+	@Override
+	public String toString() {
+		return "Reply [id=" + id + ", content=" + content + ", board=" + board + ", user=" + user + ", createDate="
+				+ createDate + "]";
+	}
+	
+//지금은 사용 안했지만 이렇게도 사용 가능
+//	private void update(User user, Board board, String content) {
+//		setUser(user);
+//		setBoard(board);
+//		setContent(content);
+//	}
+	
+	
 }
